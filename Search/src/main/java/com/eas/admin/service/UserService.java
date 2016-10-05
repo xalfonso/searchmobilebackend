@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.eas.service;
+package com.eas.admin.service;
 
-import com.eas.dao.UserDao;
+import com.eas.admin.dao.UserDao;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

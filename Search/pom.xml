@@ -49,12 +49,22 @@
             <version>${hibernate.version}</version>
         </dependency>
         
-        <!-- MySQL JDBC Driver -->
+        <!-- MySQL JDBC Driver 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>		
+        </dependency> -->
+        
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <!-- PostgreSQL JDBC Driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1211.jre7</version>
         </dependency>
+
+        
         <!-- Need this for json to/from object -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.eas.dao;
+package com.eas.admin.dao;
 
-import com.eas.model.User;
+import com.eas.admin.entity.User;
 import java.util.List;
 import javax.annotation.Resource;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,7 @@ public class UserDao {
     @Resource
     private SessionFactory sessionFactory;
 
+    private final static org.slf4j.Logger logger = LoggerFactory.getLogger(UserDao.class);
     
     public String test() {
         String hql = "from User1 where id=" + 1;
@@ -31,19 +33,20 @@ public class UserDao {
         List<User> listUser = (List<User>) query.list();
         
         
-        return "probando " + listUser.get(0).getName();
+        return "probando " + listUser.get(0).getUsername();
     }
     
     public String testSave() {
+        logger.trace("Ready to save");
         User u = new User();
-        u.setName("pepitoPrimero");
+        u.setUsername("pepitoPrimerorrffaaaa");
         sessionFactory.getCurrentSession().saveOrUpdate(u);
         return "savando pepitoPrimero";
     }
     
     public String testSave1() {
         User u = new User();
-        u.setName("pepitosegundo");
+        u.setUsername("pepitosegundorrhhaaaa");
         sessionFactory.getCurrentSession().saveOrUpdate(u);
         return "savando pepitoSegundo";
     }

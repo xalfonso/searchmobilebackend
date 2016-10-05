@@ -1,4 +1,4 @@
-package com.eas.web.controller;
+package com.eas.admin.web.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.eas.web.jsonview.Views;
-import com.eas.web.model.AjaxResponseBody;
-import com.eas.web.model.SearchCriteria;
-import com.eas.web.model.User;
+import com.eas.admin.web.jsonview.Views;
+import com.eas.admin.web.model.AjaxResponseBody;
+import com.eas.admin.web.model.SearchCriteria;
+import com.eas.admin.web.model.User;
 
 @RestController
 public class AjaxController {

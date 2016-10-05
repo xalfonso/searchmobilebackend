@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.eas.model;
+package com.eas.admin.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,16 +17,16 @@ import javax.persistence.Table;
  * @author eduardo
  */
 @Entity
-@Table(name = "user")
+@Table(name = "core.user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false, unique = true, length = 10)
+    @Column(nullable = false, unique = true, length = 10)
     private int id;
     
-    @Column(name = "name", length = 255, nullable = false)
-    private String name;
+    @Column(length = 255, nullable = false)
+    private String username;
 
     public int getId() {
         return id;
@@ -36,12 +36,15 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public User setUsername(String username) {
+        this.username = username;
+        return this;
     }
+
+    
 
 }

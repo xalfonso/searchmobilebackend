@@ -1,6 +1,6 @@
 package com.eas.config;
 
-import com.eas.model.User;
+import com.eas.admin.entity.User;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
@@ -40,18 +40,18 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public DataSource dataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/vesseltest");
-        dataSource.setUsername("root");
-        dataSource.setPassword("");
+        BasicDataSource dataSource = new BasicDataSource();        
+        dataSource.setDriverClassName("org.postgresql.Driver");        
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/search");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres");
         return dataSource;
     }
 
     private Properties getHibernateProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL94Dialect");
         return properties;
     }
 

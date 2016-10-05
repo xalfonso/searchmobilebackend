@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.eas.web.controller;
+package com.eas.admin.web.controller;
 
-import com.eas.service.UserService;
+import com.eas.admin.facade.AdminFacade;
+import com.eas.admin.entity.User;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,14 +20,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    
+
     @Resource
-    private UserService userService;
-    
-        @RequestMapping(value = "/ver", method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-	    String a = this.userService.test();
-            model.addAttribute("test", a);
-            return "verUser";
-	}
+    private AdminFacade adminFacade;
+
+    @RequestMapping(value = "/ver", method = RequestMethod.GET)
+    public String printWelcome(ModelMap model) {
+        User a = this.adminFacade.getUser(0);
+        model.addAttribute("test", a.getUsername());
+        return "verUser";
+    }
 }

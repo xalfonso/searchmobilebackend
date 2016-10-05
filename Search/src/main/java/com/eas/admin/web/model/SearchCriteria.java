@@ -1,4 +1,4 @@
-package com.eas.web.model;
+package com.eas.admin.web.model;
 
 public class SearchCriteria {
 

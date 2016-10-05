@@ -1,4 +1,4 @@
-package com.eas.web.jsonview;
+package com.eas.admin.web.jsonview;
 
 public class Views {
     public static class Public {}

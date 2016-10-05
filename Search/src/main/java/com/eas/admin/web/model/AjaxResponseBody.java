@@ -1,9 +1,9 @@
-package com.eas.web.model;
+package com.eas.admin.web.model;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.eas.web.jsonview.Views;
+import com.eas.admin.web.jsonview.Views;
 
 public class AjaxResponseBody {
 
