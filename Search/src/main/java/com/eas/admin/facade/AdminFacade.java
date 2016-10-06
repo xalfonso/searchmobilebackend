@@ -5,7 +5,9 @@
  */
 package com.eas.admin.facade;
 
+import com.eas.admin.entity.Privilege;
 import com.eas.admin.entity.User;
+import java.util.List;
 
 /**
  *
@@ -15,7 +17,24 @@ public interface AdminFacade {
     
     public void insertUser(User user);
     
+    public void updateUser(User user);
+    
     public User getUser(long id);
     
     public void deleteUser(long id);
+    
+    public List<User> getAllUser();
+    
+    public void insertPrivilge(Privilege privilege);
+    
+    public void insertAllPrivilege(List<Privilege> privileges);
+    
+    public void updatePrivilege(Privilege privilge);
+    
+    public Privilege getPrivilege(long id);
+            
+    public List<Privilege> getAllPrivilege();
+    
+    public void resetPrivileges() throws Exception;
+    
 }

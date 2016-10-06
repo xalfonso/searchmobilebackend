@@ -60,7 +60,8 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
     public SessionFactory getSessionFactory(DataSource dataSource) {
         LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
         sessionBuilder.addProperties(getHibernateProperties());
-        sessionBuilder.addAnnotatedClasses(User.class);
+        //sessionBuilder.addAnnotatedClasses(User.class);
+        sessionBuilder.scanPackages("com.eas.admin.entity");
         return sessionBuilder.buildSessionFactory();
     }
 

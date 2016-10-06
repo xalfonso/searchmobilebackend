@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Developer Ing. Eduardo Alfonso Sanchez eddie.alfonso@gmail.com
  */
 package com.eas.admin.dao;
 
@@ -12,7 +10,6 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -49,5 +46,21 @@ public class UserDao {
         u.setUsername("pepitosegundorrhhaaaa");
         sessionFactory.getCurrentSession().saveOrUpdate(u);
         return "savando pepitoSegundo";
+    }
+    
+    public List<User> getAll(){
+        return this.sessionFactory.getCurrentSession().createQuery("FROM User").list();
+    }
+    
+    public void insert(User user){
+        this.sessionFactory.getCurrentSession().save(user);            
+    }
+    
+    public void update(User user){
+        this.sessionFactory.getCurrentSession().update(user);
+    }
+    
+    public User get(long id){
+        return this.sessionFactory.getCurrentSession().load(User.class, id);
     }
 }
