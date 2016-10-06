@@ -6,9 +6,11 @@
 package com.eas.admin.facade.impl;
 
 import com.eas.admin.entity.Privilege;
+import com.eas.admin.entity.Profile;
 import com.eas.admin.facade.AdminFacade;
 import com.eas.admin.entity.User;
 import com.eas.admin.service.PrivilegeService;
+import com.eas.admin.service.ProfileService;
 import com.eas.admin.service.UserService;
 import java.util.List;
 import javax.annotation.Resource;
@@ -26,6 +28,9 @@ public class AdminFacadeImpl implements AdminFacade{
     
     @Resource
     private PrivilegeService privilegeService;
+    
+    @Resource
+    private ProfileService profileService;
     
     @Override
     public void insertUser(User user) {
@@ -81,6 +86,31 @@ public class AdminFacadeImpl implements AdminFacade{
     @Override
     public void resetPrivileges() throws Exception{
         this.privilegeService.resetPrivileges();
+    }
+
+    @Override
+    public void insertProfile(Profile profile) {
+        this.profileService.insert(profile);
+    }
+
+    @Override
+    public void updateProfile(Profile profile) {
+        this.profileService.update(profile);
+    }
+
+    @Override
+    public Profile getProfile(long id) {
+        return this.profileService.get(id);
+    }
+
+    @Override
+    public List<Profile> getAllProfile() {
+        return this.profileService.getAll();
+    }
+
+    @Override
+    public void deleteAllProfile() {
+        this.profileService.deleteAll();
     }
     
 }

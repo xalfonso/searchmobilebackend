@@ -18,17 +18,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class WelcomeController {
-    
+
     private final static org.slf4j.Logger logger = LoggerFactory.getLogger(WelcomeController.class);
-    
+
     @Resource
     private AdminFacade adminFacade;
-    
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-        
-        try {
-            //	    User user = new User();
+
+        //	    User user = new User();
 //            user.setUsername("E.MARTINEZ")
 //                    .setPassword("PASSSSSDFFG")
 //                    .setName("Eduardo")
@@ -38,12 +37,17 @@ public class WelcomeController {
 //            
 //            model.addAttribute("id", user.getId());
 
+
+        /*
+        try {
             this.adminFacade.resetPrivileges();
         } catch (Exception ex) {
             logger.error("Error: " + ex.getMessage());
         }
+        */
+        
         
         return "welcome";
     }
-    
+
 }

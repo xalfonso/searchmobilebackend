@@ -6,6 +6,7 @@
 package com.eas.admin.facade;
 
 import com.eas.admin.entity.Privilege;
+import com.eas.admin.entity.Profile;
 import com.eas.admin.entity.User;
 import java.util.List;
 
@@ -37,4 +38,13 @@ public interface AdminFacade {
     
     public void resetPrivileges() throws Exception;
     
+    public void insertProfile(Profile profile);
+    
+    public void updateProfile(Profile profile);
+    
+    public Profile getProfile(long id);
+    
+    public List<Profile> getAllProfile();
+    
+    public void deleteAllProfile();
 }
