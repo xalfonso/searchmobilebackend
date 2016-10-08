@@ -8,28 +8,31 @@
 
 <c:url var="home" value="/" scope="request" />
 
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css"
 	var="bootstrapCss" />
+<spring:url value="/resources/core/css/comunCss.css" var="comunCss" />
 <link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
+<link href="${comunCss}" rel="stylesheet" />
 
 <spring:url value="/resources/core/js/jquery.1.10.2.min.js"
 	var="jqueryJs" />
+<spring:url value="/resources/core/js/bootstrap.min.js"
+	var="bootstrapJs" />
 <script src="${jqueryJs}"></script>
+<script src="${bootstrapJs}"></script>
 </head>
-
-<nav class="navbar navbar-inverse">
+<%@include file="/WEB-INF/views/jsp/comun/menu.jsp"%>
+<!--<nav class="navbar navbar-inverse">
 	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#">Spring 4 MVC Ajax Hello World</a>
 		</div>
 	</div>
-</nav>
+</nav>-->
+<section>
+<div class="container">
 
-<div class="container" style="min-height: 500px">
-
-	<div class="starter-template">
+    <div class="content">
 		<h1>Search Form</h1>
 		<br>
 
@@ -60,14 +63,19 @@
 	</div>
 
 </div>
-
-<div class="container">
+</section>
+<!--<div class="container">-->
 	<footer>
 		<p>
-			&copy; <a href="http://www.mkyong.com">Mkyong.com</a> 2015
+			&copy; <a href="http://www.mkyong.com">Sitio Web</a> 2015
 		</p>
+                <ul class="pull-right">
+                    <li>link1</li>
+                    <li>link2</li>
+                    <li>link3</li>
+                </ul>
 	</footer>
-</div>
+<!--</div>-->
 
 <script>
 	jQuery(document).ready(function($) {

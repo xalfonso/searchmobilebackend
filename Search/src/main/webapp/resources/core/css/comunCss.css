@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-oct-2016, 21:11:32
+    Author     : ley
+*/
+
+.content{
+    padding-top: 3.5em;
+    min-height: 573px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    min-height: 3.5em;
+    padding: .5em 2em;
+}
+
+footer li + li:before{
+    content: '|';
+    margin: 0 .5em;
+}
+footer li, footer p{
+   display: inline-block; 
+}
+
+footer ul{
+    list-style: none;
+    display: inline-block; 
+    /*padding-right: 5em;
+    padding-left: 0;*/
+}
