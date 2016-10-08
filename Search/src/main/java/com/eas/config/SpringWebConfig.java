@@ -42,7 +42,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();        
         dataSource.setDriverClassName("org.postgresql.Driver");        
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/search");
+        dataSource.setUrl("jdbc:postgresql://181.175.221.140:5432/search");
         dataSource.setUsername("postgres");
         dataSource.setPassword("postgres");
         return dataSource;
