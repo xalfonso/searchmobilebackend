@@ -3,7 +3,7 @@
     Created on : 07-oct-2016, 19:56:30
     Author     : ley
 --%>
-<head>
+<header>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
 <!--        <div class="navbar-header">
@@ -14,7 +14,7 @@
         </div>-->
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
+                <li class="active"><a href="${home}">Inicio</a></li>
                 <li><a href="#">Acerca</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li class="dropdown">
@@ -24,11 +24,13 @@
                         <li class="divider"></li>
                         <li class="dropdown-header">Gestionar Usuarios</li>
                         <li><a href='#'>Insertar</a></li>
-                        <li><a href='#'>Editar</a></li>                       
+                        <li><a href='#'>Editar</a></li> 
+                        <li><a href='${home}/user'>Listar</a></li>
+                        <li class="divider"></li>
                     </ul>
                 </li>               
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-</head>
+</header>

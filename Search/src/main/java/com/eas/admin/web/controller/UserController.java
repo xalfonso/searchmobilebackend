@@ -11,22 +11,27 @@ import com.eas.comun.web.json.Message;
 import com.eas.comun.web.json.ResponseJsonWrapper;
 import java.util.List;
 import javax.annotation.Resource;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author eduardo
  */
-@RestController
+//@RestController
+@Controller
 @RequestMapping("/user")
 public class UserController {
 
     @Resource
     private AdminFacade adminFacade;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST)
     public ResponseJsonWrapper listAction() {
         Message message = null;
         List<User> users = null;
@@ -41,8 +46,9 @@ public class UserController {
         return responseJsonWrapper;
     }
 
-    @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public ResponseJsonWrapper salvarAction(User user) {
+    @ResponseBody
+    @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    public ResponseJsonWrapper salvarAction(@RequestBody User user) {
         Message message = null;
         try {
             this.adminFacade.insertUser(user);
@@ -53,6 +59,12 @@ public class UserController {
 
         ResponseJsonWrapper responseJsonWrapper = new ResponseJsonWrapper(message);
         return responseJsonWrapper;
+    }
+    
+    
+    @RequestMapping(method = RequestMethod.GET)
+    public String listUsers(){
+        return "admin/verUser";
     }
 
 }
