@@ -5,7 +5,7 @@
         <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
         <spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
         <spring:url value="/resources/core/js/jquery.1.10.2.min.js" var="jqueryJs" />
-        <spring:url value="/resources/core/css/comunCss.css" var="comunCss" />
+        <spring:url value="/resources/comun/css/comunCss.css" var="comunCss" />
         <script src="${jqueryJs}"></script>
         <script src="${bootstrapJs}"></script>
         <script src="${angularJs}"></script>
