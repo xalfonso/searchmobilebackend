@@ -11,13 +11,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <%@include file="/WEB-INF/views/jsp/comun/intoHead.jsp" %>
-        <title>Users</title>
+        <spring:url value="/resources/admin/js/userController.js" var="adminJs"/>
+        <script src="${adminJs}"></script>
+        <title>Users List</title>
     </head>
     <body>
-        <%@include file="/WEB-INF/views/jsp/comun/menu.jsp"%>
-        <div ng-app="adminModule" ng-controller="userController" class="content">
-           <h1>{{title}}</h1>
-           <table class="table-condensed table-striped">
+        <%@include file="/WEB-INF/views/jsp/comun/layersBegin.jspf"%>
+        <div ng-app="adminModule" ng-controller="userController">
+            <h1>{{title}}</h1>
+            <table class="table-condensed table-striped">
                 <tr ng-repeat="user in result">
                     <td>{{ user.name + " " + user.surname}}</td>
                     <td>{{ user.username}}</td>
@@ -25,5 +27,6 @@
                 </tr>
             </table>
         </div>
+        <%@include file="/WEB-INF/views/jsp/comun/layersEnd.jspf" %>
     </body>
 </html>

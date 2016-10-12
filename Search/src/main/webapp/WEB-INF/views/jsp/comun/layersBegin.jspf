@@ -1,0 +1,6 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="windows-1252" %>
+        <%@include file="/WEB-INF/views/jsp/comun/menu.jspf"%>
+        <section>
+            <div class="container">
+                <div class="content">

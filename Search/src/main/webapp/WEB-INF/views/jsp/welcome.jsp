@@ -1,21 +1,14 @@
 <%@page session="false"%>
-<%--<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>--%>
 <%@include file="/WEB-INF/views/jsp/comun/directivas.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Spring MVC 4 + Ajax Hello World</title>
-
         <%@include file="/WEB-INF/views/jsp/comun/intoHead.jsp" %>
-
     </head>
     <body>
-        <%@include file="/WEB-INF/views/jsp/comun/menu.jsp"%>
-        <section>
-            <div class="container">
+        <%@include file="/WEB-INF/views/jsp/comun/layersBegin.jspf"%>
 
-                <div class="content">
                     <h1>Search Form</h1>
                     <br>
 
@@ -43,23 +36,7 @@
                         </div>
                     </form>
 
-                </div>
-
-            </div>
-        </section>
-        <!--<div class="container">-->
-        <footer>
-            <p>
-                &copy; <a href="http://www.mkyong.com">Sitio Web</a> 2015
-            </p>
-            <ul class="pull-right">
-                <li>link1</li>
-                <li>link2</li>
-                <li>link3</li>
-            </ul>
-        </footer>
-        <!--</div>-->
-
+<%@include file="/WEB-INF/views/jsp/comun/layersEnd.jspf" %>
         <script>
             jQuery(document).ready(function ($) {
 

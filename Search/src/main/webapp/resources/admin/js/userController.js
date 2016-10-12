@@ -14,7 +14,7 @@ angular.module('adminModule', [])
                 $scope.msgType = response.data.message.type;
                 $scope.result = response.data.result;
                 
-                $scope.title = "Users";
+                $scope.title = "Users List";
             }, function myError(response) {
                 $scope.msg = response.statusText;
                 $scope.msgType = -1;

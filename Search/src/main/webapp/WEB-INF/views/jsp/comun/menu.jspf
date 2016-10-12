@@ -1,8 +1,5 @@
-<%-- 
-    Document   : menu
-    Created on : 07-oct-2016, 19:56:30
-    Author     : ley
---%>
+
+<%@ page pageEncoding="windows-1252" %>
 <header>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -25,7 +22,7 @@
                         <li class="dropdown-header">Gestionar Usuarios</li>
                         <li><a href='#'>Insertar</a></li>
                         <li><a href='#'>Editar</a></li> 
-                        <li><a href='${home}/user'>Listar</a></li>
+                        <li><a href='${home}user'>Listar</a></li>
                         <li class="divider"></li>
                     </ul>
                 </li>               

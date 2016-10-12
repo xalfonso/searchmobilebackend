@@ -1,0 +1,12 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="windows-1252" %>
+<footer>
+    <p>
+        &copy; <a href="http://www.mkyong.com">Sitio Web</a> 2015
+    </p>
+    <ul class="pull-right">
+        <li>link1</li>
+        <li>link2</li>
+        <li>link3</li>
+    </ul>
+</footer>
