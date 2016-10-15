@@ -17,8 +17,14 @@
     </head>
     <body>
         <%@include file="/WEB-INF/views/jsp/comun/layersBegin.jspf"%>
-        <div ng-app="adminModule" ng-controller="userController">
+        <div ng-app="adminModule" ng-controller="userListController">
+
             <h1>{{title}}</h1>
+            <!--<div ng-show="msgType!==1" class="bg-danger text-danger"> {{msg}} </div>-->
+            <div ng-switch="msgType">
+                <p ng-switch-when="0" class="bg-danger text-danger"> {{msg}} </p>
+                <p ng-switch-when="1" class="bg-warning text-warning"> {{msg}} </p>
+            </div>
             <table class="table-condensed table-striped">
                 <tr ng-repeat="user in result">
                     <td>{{ user.name + " " + user.surname}}</td>

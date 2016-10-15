@@ -45,9 +45,19 @@ public class UserController {
         ResponseJsonWrapper responseJsonWrapper = new ResponseJsonWrapper(message, users);
         return responseJsonWrapper;
     }
-
-    @ResponseBody
+    
+    @RequestMapping(method = RequestMethod.GET)
+    public String listUsers(){
+        return "admin/verUser";
+    }
+    
     @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    public String insertUser(){
+        return "admin/insertUser";
+    }
+    
+    @ResponseBody
+    @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public ResponseJsonWrapper salvarAction(@RequestBody User user) {
         Message message = null;
         try {
@@ -59,12 +69,6 @@ public class UserController {
 
         ResponseJsonWrapper responseJsonWrapper = new ResponseJsonWrapper(message);
         return responseJsonWrapper;
-    }
-    
-    
-    @RequestMapping(method = RequestMethod.GET)
-    public String listUsers(){
-        return "admin/verUser";
-    }
+    }    
 
 }
